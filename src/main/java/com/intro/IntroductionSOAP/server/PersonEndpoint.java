@@ -1,11 +1,11 @@
 package com.intro.IntroductionSOAP.server;
 
+import localhost._8081.ws.person.ProcessPersonRequest;
+import localhost._8081.ws.person.ProcessPersonResponse;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
-import wsdl.ProcessPersonRequest;
-import wsdl.ProcessPersonResponse;
 
 
 @Endpoint
