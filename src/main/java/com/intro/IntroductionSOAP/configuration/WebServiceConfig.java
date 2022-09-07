@@ -29,7 +29,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema personSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("RequestPort");
-        wsdl11Definition.setLocationUri("/ws/person");
+        wsdl11Definition.setLocationUri("/ws");
         wsdl11Definition.setTargetNamespace("http://localhost:8081/ws/person");
         wsdl11Definition.setSchema(personSchema);
         return wsdl11Definition;

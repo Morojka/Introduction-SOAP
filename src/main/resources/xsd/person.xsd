@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="wsdl"
-           xmlns:tns="wsdl"
+           targetNamespace="http://localhost:8081/ws/person"
            elementFormDefault="qualified">
 
     <xs:element name="processPersonRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="person" type="tns:person"/>
+                <xs:element name="person" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -15,44 +14,9 @@
     <xs:element name="processPersonResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="person" type="tns:person"/>
+                <xs:element name="person" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-
-    <xs:complexType name="person">
-        <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="surname" type="xs:string"/>
-            <xs:element name="patronymic" type="xs:string"/>
-            <xs:element name="birthDate" type="xs:date"/>
-            <xs:element name="gender" type="tns:gender"/>
-            <xs:element name="document" type="tns:document"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="document">
-        <xs:sequence>
-            <xs:element name="series" type="xs:string"/>
-            <xs:element name="number" type="xs:string"/>
-            <xs:element name="type" type="tns:documentType"/>
-            <xs:element name="issueDate" type="xs:date"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:simpleType name="gender">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="MAN"/>
-            <xs:enumeration value="WOMAN"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:simpleType name="documentType">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="PASSPORT"/>
-            <xs:enumeration value="INTERNATIONAL_PASSPORT"/>
-            <xs:enumeration value="DRIVER"/>
-        </xs:restriction>
-    </xs:simpleType>
 
 </xs:schema>
