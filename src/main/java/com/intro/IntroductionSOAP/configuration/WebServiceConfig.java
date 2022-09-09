@@ -1,13 +1,10 @@
 package com.intro.IntroductionSOAP.configuration;
 
-import org.springframework.boot.autoconfigure.web.servlet.DispatcherServletPath;
-import org.springframework.boot.autoconfigure.web.servlet.DispatcherServletRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.ws.config.annotation.EnableWs;
 import org.springframework.ws.config.annotation.WsConfigurerAdapter;
 import org.springframework.ws.transport.http.MessageDispatcherServlet;
